@@ -24,4 +24,8 @@ export class CoursesService {
   updateCourse(id: number, objeto: Partial<Course>): Observable<any> {
     return this.http.put(`/api/courses/${id}`, objeto);
   }
+
+  getChukNorris() {
+     return this.http.get('https://api.chucknorris.io/jokes/random');
+  }
 }
